@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.tags_container {
+  background-color: #1c437e;
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.row_headline {
+  width: max-content;
+  height: 33px;
+  font-size: 22px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  justify-content: center;
+  padding-top: 70px;
+  padding-left: 293px;
+  text-align: center;
+  color: #f7f5f9;
+}
+
+.row_tag_box {
+  margin-top: 70px;
+  background-color: #dbe1e9;
+  height: 80px;
+  width: 765px;
+  margin-left: 260px;
+  padding: 12px 289px 22px 32px;
+  border-radius: 5px;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+.tag_chips {
+  width: fit-content;
+  height: 40px;
+  margin: 0px 14px 0px 0px;
+  padding: 8px 49px 8px 50px;
+  border-radius: 5px;
+  background-color: #007500;
+  font-family: "Open Sans", sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #f7f5f9;
+}
+
+.mat-chip.mat-standard-chip .mat-chip-remove {
+  color: #f7f5f9;
+  font-size: 18px;
+  padding-left: 5px;
+  opacity: 0.4;
+  width: max-content;
+  size: 10px;
+}
+
+.tag_remove {
+  width: 10px;
+  margin-top: -7px;
+}
+
+.example-chip-list {
+  width: 0px;
+}
+
+.mat-chip-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: -10px;
+  width: max-content;
+}
+
+.cancel {
+  object-fit: contain;
+  margin-left: 1015px;
+  margin-top: 90px;
+  color: white;
+  background-color: #1c437e;
+  border: hidden;
+  outline: none;
+}
+
+.publish {
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  justify-content: center;
+  width: 166px;
+  height: 52px;
+  margin: 55px 555px 0;
+  border-radius: 5px;
+  background-color: #ff9800;
+  outline: none;
+  border: hidden;
+}
+
+.mat-option {
+  min-width: fit-content;
+  display: block;
+  line-height: 48px;
+  height: 48px;
+  padding: 5px 8px;
+  text-align: justify;
+  text-decoration: none;
+  width: max-content;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.invalidTopic {
+  margin-top: 46px;
+  padding-left: 480px;
+  font-size: 12px;
+  color: red;
+  display: inline-block;
+  width: max-content;
+  position: absolute;
+}
+
+.error_icon {
+  width: 12px;
+  height: 11px;
+  margin-right: 2px;
+  margin-top: -2px;
+}
+
+.topic_autocomplete {
+  margin-top: 8px;
+}

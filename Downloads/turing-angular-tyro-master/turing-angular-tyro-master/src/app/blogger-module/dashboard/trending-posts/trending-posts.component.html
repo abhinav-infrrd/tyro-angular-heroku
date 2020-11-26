@@ -1,0 +1,35 @@
+<div class="flex_container">
+  <div class="row_header">
+    <img
+      src="../../../../assets/profits.svg"
+      alt="trend"
+      class="profits_logo"
+    />
+    <div class="row_header_tagline"><p>TRENDING ON TYRO</p></div>
+  </div>
+  <div *ngIf="isLoading === true" class="loading">
+    <p class="loading-image">
+      <img
+        src="https://cdn3.iconfinder.com/data/icons/neutro-interface/32/spinner-512.png"
+      />
+    </p>
+  </div>
+  <div class="row_blog">
+    <div
+      class="row_blog_details"
+      *ngFor="let post of trendingPost; let index = index"
+    >
+      <p class="blog_count">0{{ index + 1 }}</p>
+      <div class="blog_details_column" *ngIf="post['author']">
+        <img
+          [src]="post.author.profilePic.url"
+          alt="user"
+          class="author_profile_pic"
+        />
+        <p class="blog_author">{{ post["author"].name }}</p>
+        <p class="blog_title">{{ post["title"] }}</p>
+        <div class="blog_date">{{ post["createdOn"] | date: medium }}</div>
+      </div>
+    </div>
+  </div>
+</div>

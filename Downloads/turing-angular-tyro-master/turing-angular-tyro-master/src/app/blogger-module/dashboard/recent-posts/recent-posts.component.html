@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="new-user" *ngIf="recentPosts?.length < 1">
+    <p class="msg">Please follow topics to see the feed here</p>
+    <br>
+    <p class="explore">Explore Tyro !</p>
+  </div>
+  <div>
+    <div class="recent_blogs" *ngFor="let blog of recentPosts; let index = index ">
+      <div class="row_blog_author">
+        <img src=" https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80 " alt="Abc" class="author_profile_pic" />
+        <p>{{ index }}</p>
+      </div>
+      <div class="row_blog_details">
+        <p class="blog_title">{{ blog["title"] }}</p>
+        <p class="blog_peek">
+          {{ blog["content"] }}
+        </p>
+        <p class="time_passed">{{ blog["createdOn"] | dateAgo}}</p>
+      </div>
+    </div>
+  </div>
+</div>

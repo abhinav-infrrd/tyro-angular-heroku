@@ -1,0 +1,35 @@
+.flex-container {
+    display:flex;
+    flex-direction: row;
+    background-color: #f7f5f9;
+}
+
+.posts {
+    width: 100%;
+}
+
+.follow {
+    width: 100%;
+}
+
+.mat-divider {
+    display: block;
+    margin: 0;
+    border-top-width: 1px;
+    border-top-style: solid;
+ }
+
+.people-topic {
+    height: 100%;
+ }
+
+.new {
+    display:flex;
+    flex-direction:row;
+}
+
+.sticky {
+    position: fixed;
+    margin-left: 814.5px;
+    margin-top: -400px;
+}

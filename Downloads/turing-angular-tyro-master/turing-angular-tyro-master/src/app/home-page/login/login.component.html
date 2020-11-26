@@ -1,0 +1,36 @@
+<div class="body">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input type="email" class="form-control" placeholder="EMAIL" formControlName="email" />
+      <span class="email-error" *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched">
+        <i class="glyphicon glyphicon-remove" data-toggle="tooltip" data-placement="top" title="Invalid Email"></i>
+      </span>
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" placeholder="PASSWORD" formControlName="password" />
+      <span class="password-error" *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">
+        <i class="glyphicon glyphicon-remove" data-toggle="tooltip" data-placement="top" title="Enter the password"></i>
+      </span>
+      <span class="email-error" *ngIf="errMessage">
+        <i class="glyphicon glyphicon-remove" data-toggle="tooltip" data-placement="top" title=" {{ errMessage }} "></i>
+      </span>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">
+      LOGIN
+    </button>
+  </form>
+  <div class="bottom">
+    <div class="or">
+      <p>— OR —</p>
+    </div>
+    <div class="social">
+      <a href="#">
+        <img src="../assets/search.png" alt="google" />
+      </a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="#">
+        <img src="../assets/facebook.png" alt="facebook" />
+      </a>
+    </div>
+  </div>
+</div>

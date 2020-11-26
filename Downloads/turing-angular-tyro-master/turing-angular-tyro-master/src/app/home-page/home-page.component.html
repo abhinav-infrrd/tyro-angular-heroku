@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="lhs">
+        <div class="logo">
+          <img src="../../assets/group.svg" alt="logo" />
+        </div>
+        <div class="tyro">
+          <p>tyro</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 column_form">
+      <div class="row_text">
+        <p class="text_header">A medium clone</p>
+        <p class="text_tagline">
+          Who says training projects don't have to look pretty?
+        </p>
+      </div>
+      <div class="page_links">
+        <a routerLink="/login" routerLinkActive="active" >LOGIN</a> &nbsp;
+        <a routerLink="/signup" routerLinkActive="active" >SIGNUP</a>
+      </div>
+      <div class="column_form_signup">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

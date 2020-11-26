@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+.body {
+  margin: auto;
+  padding: 0px 0px 0px 0px;
+}
+
+.alert-danger{
+  width: 190px;
+  height: 50px;
+  margin-left: 125px;
+}
+
+.message{
+  margin-top: -4px;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form-group {
+  align-self: center;
+  margin-left: 65px;
+  margin-top: 15px;
+  width: 300px;
+  object-fit: contain;
+}
+
+.form-control {
+  background-color: #dbe1e9;
+}
+
+::placeholder {
+  color: rgba(28, 67, 126, 0.52);
+  font-size: 13px;
+  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form-control.ng-touched.ng-invalid{ 
+    border-color: red;
+}
+
+.btn {
+  width: 159px;
+  height: 40px;
+  margin-right: -10px;
+  margin-top: 15px;
+  padding: 0px 48px;
+  background-color: #1c437e;
+  color: white;
+  border-radius: 0px;
+  outline: none;
+}
+
+.name-error {
+  position: absolute;
+  margin-top: -27px;
+  margin-left: 130px;
+  color: red;
+}
+
+.email-error {
+  position: absolute;
+  margin-top: -27px;
+  margin-left: 130px;
+  color: red;
+}
+
+.password-error {
+  position: absolute;
+  margin-top: -27px;
+  margin-left: 130px;
+  color: red;
+}
+
+

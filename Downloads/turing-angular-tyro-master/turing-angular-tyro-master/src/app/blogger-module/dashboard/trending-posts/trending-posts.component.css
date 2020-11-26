@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap");
+
+.flex_container {
+  background-color: #f7f5f9;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+}
+
+.row_header {
+  align-content: center;
+  display: flex;
+}
+
+.row_header_tagline {
+  margin-top: 64px;
+}
+
+.row_header_tagline p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.row_blog_details {
+  display: flex;
+  padding-left: 5px;
+  margin-right: 78px;
+}
+
+.row_blog {
+  margin-left: 12px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.loading {
+  margin-left: 12px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.loading p{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1c437e;
+  text-align: center;
+  margin-left: 600px;
+}
+
+.loading-image img{
+  height: 50px;
+  width: 50px;
+}
+
+.blog_count {
+  width: 57px;
+  height: 65px;
+  margin: -17px -6px 0px 50px;
+  font-size: 48px;
+  font-weight: bolder;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1c437e;
+}
+
+.profits_logo {
+  margin: 64px 16px 40px 74px;
+  object-fit: contain;
+  width: 40px;
+  height: 22px;
+}
+
+.blog_author {
+  width: 100px;
+  height: 19px;
+  margin: -20px 44px 0px 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.blog_title {
+  width: 200px;
+  margin: 10px 44px 2px 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  white-space: inherit;
+}
+
+.blog_date {
+  height: 19px;
+  margin: -10px 215px 94px 17.5px;
+  padding-top: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: max-content;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.blog_details_column {
+  width: 110px;
+}
+
+.author_profile_pic {
+  margin-right: 10px;
+  margin-left: 15px;
+  margin-top: 12x;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: solid 1px #979797;
+}

@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="title">
+        <p>PEOPLE TO FOLLOW</p>
+    </div>
+    <div class="content">
+        <div class="people" *ngFor = "let user of people | slice:0:3">
+            <div class="people-image">
+                <img src="{{ imageUrl }}" alt=" {{ user.name }}" height="72px" width="72px">
+            </div>
+            <div class="people-name">
+                <p>{{ user.name }}</p>
+            </div>
+        </div>
+        <div class="see-more" (click)="onSeeMore()">
+            <img src="../../../../assets/seemore.svg">
+            <p>See More</p>
+        </div>
+    </div>
+</div>
+
+<div class="more-people" *ngIf="morePeople">
+    <div class="subtitle">
+        <p>PEOPLE TO FOLLOW</p>
+        <mat-divider></mat-divider>
+    </div>
+    <div class="more-people-data" *ngFor="let user of people">
+        <div class = "mt-container">
+            <div  class="mt-image">
+                <img src="{{ imageUrl }}">
+            </div>
+            <div class="more-people-name">
+                <p> {{user.name}} </p>
+            </div>
+        </div>   
+        <div 
+            class="follow-button" 
+            (click)="onFollow(user._id)"
+            *ngIf="user.isFollowing === false">
+                <button type="button"><p>Follow</p></button>
+            </div>
+            <div 
+            class="unfollow-button" 
+            (click)="onUnfollow(user._id)" 
+            *ngIf="user.isFollowing === true">
+                <button type="button"><p>Following</p></button>
+            </div>
+    </div>
+</div>
+

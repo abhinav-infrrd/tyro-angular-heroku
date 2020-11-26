@@ -1,0 +1,30 @@
+<div class="body">
+  <form [formGroup]="signupform" (ngSubmit)="onSignup()">
+    <div class="form-group">
+      <input type="text" placeholder="NAME" id="name" class="form-control" formControlName="name" />
+      <span class="name-error" *ngIf="!signupform.get('name').valid && signupform.get('name').touched">
+        <i class="glyphicon glyphicon-remove" data-toggle="tooltip" data-placement="top" title="Invalid Name"></i>
+      </span>
+    </div>
+    <div class="form-group">
+      <input type="email" placeholder="EMAIL" id="email" class="form-control" formControlName="email" />
+      <span class="email-error" *ngIf="!signupform.get('email').valid && signupform.get('email').touched">
+        <i class="glyphicon glyphicon-remove" data-toggle="tooltip" data-placement="top" title="Invalid format"></i>
+      </span>
+      <span class="email-error" *ngIf="errMessage">
+        <i class="glyphicon glyphicon-remove" data-toggle="tooltip" data-placement="top" title=" {{errMessage}} "></i>
+      </span>
+    </div>
+    <div class="form-group">
+      <input type="password" placeholder="PASSWORD" id="password" class="form-control" formControlName="password" />
+      <span class="password-error" *ngIf="(!signupform.get('password').valid && signupform.get('password').touched)">
+        <i class="glyphicon glyphicon-remove" data-toggle="tooltip" data-placement="top" title=" Enter Password "></i>
+      </span>
+    </div>
+    <div class="form-group">
+      <button class="btn" [disabled]="!signupform.valid" type="submit">
+        SIGNUP
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="title">
+        <p>TOPICS TO FOLLOW</p>
+    </div>
+    <div class="content" *ngFor="let topic of topics | slice:0:2">
+       <div class="topic">
+            <div class="topic-name">
+                <p>{{topic.topicName}}</p>
+            </div>
+            <div 
+            class="follow-button" 
+            (click)="onFollowTopic(topic._id)" 
+            *ngIf="topic.isFollowing === false">
+                <button type="button"><p>Follow</p></button>
+            </div>
+            <div 
+            class="unfollow-button" 
+            (click)="onUnfollowTopic(topic._id)" 
+            *ngIf="topic.isFollowing === true">
+                <button type="button"><p>Following</p></button>
+            </div>
+        </div>
+        <div class="line">
+        </div>
+    </div>
+    <div class="see-more" (click)="onSeeMore()">
+        <p>See More</p>      
+    </div>
+</div>
+
+<div class="more-topics" *ngIf="moreTopics">
+    <div class="subtitle">
+        <p>TOPICS TO FOLLOW</p>
+        <div class="divider">
+        </div>
+    </div>
+    <div class="more-topics-data" *ngFor="let topic of topics">
+        <div class = "mt-container">
+            <div class="more-topic-name">
+                <p> {{topic.topicName}} </p>
+            </div>
+            <div 
+            class="follow-button" 
+            (click)="onFollowTopic(topic._id)" 
+            *ngIf="topic.isFollowing === false">
+                <button type="button"><p>Follow</p></button>
+            </div>
+            <div 
+            class="unfollow-button" 
+            (click)="onUnfollowTopic(topic._id)" 
+            *ngIf="topic.isFollowing === true">
+                <button type="button"><p>Following</p></button>
+            </div>
+        </div>   
+        <div class="divider"></div>
+    </div>
+    <div class="end">
+        <p>All good things must come to a end</p>
+    </div>  
+</div>

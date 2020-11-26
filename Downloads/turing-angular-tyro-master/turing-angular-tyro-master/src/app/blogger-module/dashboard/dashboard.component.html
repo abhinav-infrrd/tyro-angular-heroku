@@ -1,0 +1,18 @@
+<div class="dashboard">
+    <app-header></app-header>
+    <app-trending-posts></app-trending-posts>
+    <mat-divider></mat-divider>
+    <div class="flex-container">
+        <div class="posts">
+            <app-recent-posts></app-recent-posts>
+        </div>
+        <div class="people-topic" [class.sticky] = "isSticky">
+            <div class="new">
+                <mat-divider [vertical]="true"></mat-divider>
+                <div>
+                     <app-follow></app-follow>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="tags_container">
+  <button type="button" class="cancel" (click)="onCancel()">
+    <img src="../../../../assets/cancel.svg" />
+  </button>
+  <div class="row_headline">
+    Add upto 5 topics so that readers know what your post is about
+  </div>
+  <div class="row_tag_box">
+    <p *ngIf="error" class="invalidTopic">
+      <img
+        src="../../../../assets/alert.webp"
+        class="error_icon"
+        data-toggle="tooltip"
+        title="error"
+      />
+      <span>{{ error }}</span>
+    </p>
+
+    <mat-form-field class="example-chip-list">
+      <mat-chip-list #chipList aria-label="topic selection">
+        <mat-chip
+          class="tag_chips"
+          *ngFor="let topic of chosenTopics"
+          [selectable]="selectable"
+          [removable]="removable"
+          (removed)="remove(topic)"
+        >
+          {{ topic }}
+          <mat-icon matChipRemove *ngIf="removable">
+            <img src="../../../../assets/cancel.svg" class="tag_remove" />
+          </mat-icon>
+        </mat-chip>
+        <input
+          [formControl]="topicCtrl"
+          [matAutocomplete]="auto"
+          [matChipInputFor]="chipList"
+          [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+          (matChipInputTokenEnd)="add($event)"
+        />
+      </mat-chip-list>
+      <div class="topic_autocomplete">
+        <mat-autocomplete
+          #auto="matAutocomplete"
+          (optionSelected)="selected($event)"
+        >
+          <mat-option
+            class="options"
+            *ngFor="let topic of filteredchosenTopics | async"
+            [value]="topic"
+          >
+            {{ topic }}
+          </mat-option>
+        </mat-autocomplete>
+      </div>
+    </mat-form-field>
+  </div>
+  <div>
+    <button type="button" class="publish" (click)="publish()">PUBLISH</button>
+  </div>
+</div>
